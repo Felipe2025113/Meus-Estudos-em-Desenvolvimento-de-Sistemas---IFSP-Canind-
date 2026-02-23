@@ -1,0 +1,643 @@
+Questão1
+tempo = int(input("Digite o tempo gasto na viagem em horas:"))
+velocidade_media = int(input("Digite a velocidade média da viagem em km/h:"))
+
+distancia = tempo * velocidade_media
+litros_usados = distancia / 12
+
+print ("Velocidade média: ", velocidade_media, "km/h")
+print ("Tempo gasto na viagem: ", tempo, "horas")
+print ("Distância percorrida: ", distancia, "km")
+print ("Quantidade de litros usada na viagem: ", '%.2f' %litros_usados, "litros")
+
+Questão2
+fahrenheit = float(input("Digite a temperatura em graus Fahrenheit:"))
+celsius = ((fahrenheit - 32) * 5 ) / 9
+
+print ("Temperatura me celsius:", celsius, "°C")
+
+Questão3
+import math
+raio = float(input("Digite o raio da lata de óleo em cm: "))
+altura = float(input("Digite a altura da lata de óleo em cm: "))
+
+volume = math.pi * raio ** 2 * altura
+
+print ("Volume da lata de óleo: ", volume, "cm")
+
+Questão4
+a = input("Digite o valor de A: ")
+b = input("Digite o valor de B: ")
+
+a,b = b,a
+
+print ("O valor de A ápos a troca: ", a)
+print ("O valor de B ápos a troca: ", b)
+
+Questão5
+numero = int(input("Digite um número inteiro: "))
+quadrado = numero ** 2
+
+print ("O quadrado de ", numero, "é:", quadrado)
+
+Questão6
+valor = float(input("Digite o valor da prestação: "))
+taxa = float(input("Digite a taxa de juros (em %): "))
+tempo = float(input("Digite o tempo de atraso (em meses): "))
+
+prestacao = valor + (valor*(taxa/100) * tempo)
+print ("Valor da prestação em atraso: ", prestacao)
+
+Questão7
+nr_coelhos = int(input("Digite o número de coelhos: "))
+custo = (nr_coelhos * 0,70) / 1 + 10
+
+print ("Custo de criação de coelhos: ", '%.2f' %custo)
+
+1) Crie um programa que permita fazer a conversão cambial entre Reais e Dólares.
+Considere como taxa de câmbio US$1,00 = R$2,40. Leia um valor em Reais pelo
+teclado e mostre o correspondente em Dólares.
+
+TAXA = 2.40
+valor_reais = float(input("Digite o valor em Reais (R$): "))
+valor_dolares = valor_reais / TAXA
+print("O valor em dólares será: US$", '%.2f' %valor_dolares)
+
+3) Calcule quantos azulejos são necessários para azulejar uma parede. É necessário
+conhecer a altura da parede (AP), a sua largura (LP), e a altura do azulejo (AA) e sua
+largura (LA). Leia os dados através do teclado.
+
+AP = float(input("Digite a altura da parede (AP): "))
+LP = float(input("Digite a largura da parede (LP): "))
+AA = float(input("Digite a altura do azulejo (AA): "))
+LA = float(input("Digite a largura do azulejo (LA): "))
+
+area_parede = AP * LP
+area_azulejo = AA * LA
+
+quantidade = int(area_parede / area_azulejo)
+
+print ("A quantidade de azuleijos necessária será: ", quantidade)
+
+4) Faça um programa que, a partir das medidas dos lados de um retângulo, lidos via
+teclado, calcule a área e o perímetro deste retângulo.
+
+altura = float(input("Digite a altura do retângulo: "))
+largura = float(input("Digite a largura do retângulo: "))
+
+area = float(largura * altura)
+perimetro = float((largura * 2) + (altura * 2))
+
+print ("A área do retângulo é: ", area)
+print ("O perímetro do retângulo é: ", perimetro)
+
+5) A condição física de uma pessoa pode ser medida com base no cálculo do IMC,
+Índice de Massa Corporal, o qual é calculado dividindo-se a massa da pessoa ( em kg)
+pela altura da mesma (h em m) elevada ao quadrado (IMC= m/h²). Escreva um
+programa que leia a massa e a altura de uma pessoa, calcule e mostre o IMC.
+
+massa = float(input("Digite a massa (em Kg): "))
+altura = float(input("Digite a altura (em m): "))
+
+IMC = float(massa/altura) ** 2
+
+print ("O IMC será: ", IMC)
+
+6) Dado o valor do raio (r) de uma circunferência, elaborar um programa para calcular
+e imprimir sua área (A) e o seu comprimento (C). A fórmula da área do círculo é A=_ r2
+e do comprimento é C=2_ r.
+
+raio = float(input("Digite o raio do circulo: "))
+
+area = float((raio ** 2) * 3.14)
+comprimento = float(raio * 2)
+
+print ("A área será: ", area)
+print ("O comprimento será: ", comprimento)
+
+7) Elaborar um programa para calcular e exibir o volume (V) de uma esfera e a área
+(A) de sua superfície, dado o valor de seu raio (R). A fórmula do volume da esfera é
+V=4/3 _ R3 e da área é A=4_ R2
+
+raio = float(input("Digite o raio: "))
+
+volume = float((raio ** 3) * 4/3 * 3.14 )
+area = float((raio ** 2) * 4 * 3.14)
+
+print ("O volume será: ", volume)
+print ("A área será: ", area)
+
+8) Faça um programa para calcular a média final de um aluno, supondo-se que há
+quatro notas bimestrais durante o ano e que esta é calculada através de uma média
+aritmética simples (todos os bimestres têm o mesmo peso).
+
+n1 = float(input("Digite a nota 1: "))
+n2 = float(input("Digite a nota 2: "))
+n3 = float(input("Digite a nota 3: "))
+n4 = float(input("Digite a nota 4: "))
+
+media = (n1 + n2 + n3 + n4) / 4
+
+print ("A média será: ", media)
+
+9) O critério de avaliação semestral de determinada escola segue a regra:
+P1 – primeira avaliação do semestre.
+P2 – segunda avaliação do semestre.
+Ativ – nota atribuída pelas atividades realizadas no semestre.
+Média = P1 x 4 + P2 x 4 + Ativ x 2
+------------------------------------
+ 10
+
+p1 = float(input("Digite a nota 1: "))
+p2 = float(input("Digite a nota 2: "))
+atv = float(input("Digite a nota 3: "))
+
+media = ((p1 * 4) + (p2 * 4) + (atv * 2)) / 10
+
+print ("A média será: ", media)
+
+10) Elaborar um programa para receber valores, via teclado, nas variáveis "a" e "b".
+Após isto, o programa, utilizando-se de uma 3a. variável "c", deverá trocar o conteúdo
+das variáveis "a" e "b".
+
+A = int(input("Digite um número: "))
+B = int(input("Digite outro número: "))
+
+C = A
+A = B
+B = C
+
+print ("Os valores ficarão: ", A, B)
+
+11) (DESAFIO) Idem o programa anterior, sem utilizar-se de uma 3a. variável.
+
+A = int(input("Digite um número: "))
+B = int(input("Digite outro número: "))
+
+A,B = B,A
+
+12) Elaborar um programa que receba, via teclado, os valores do espaço percorrido e
+do tempo gasto por um veículo em movimento, para calcular e apresentar em tela sua
+velocidade média.
+
+distancia = float(input("Digite a distancia percorrida: "))
+tempo = float(input("Digite o tempo gasto: "))
+
+velocidade_media = float(distancia / tempo)
+
+print ("A velocidade média foi de: ", velocidade_media, "Km/h")
+
+13) Num laboratório de física, em uma experiência de Movimento Uniformemente
+Variado, foram encontrados os seguintes valores: s0=2m, v0=3m/s, a=10m/s2.
+Digitado o valor de t (segundos), apresentar em tela o valor de s (metros). Dada a
+fórmula:
+s = s0 + v0 . t + ½ . a . t2
+
+s0 = 2.0
+v0 = 3.0
+a = 10.0
+
+t = float(input("Digite o tempo t (segundos): "))
+
+s = s0 + v0 * t + 0.5 * a * (t ** 2)
+
+print(f"Para t = {t} s, s = {s} m")
+
+1) Elaborar um programa em que informe se o número digitado pelo usuário é par ou
+impar
+
+A = int(input("Digite um número: "))
+
+if A % 2 == 0:
+    print ("É par")
+else:
+    print ("É impar")
+
+--------------------------------------------------------------------
+2) Digitado um número inteiro entre 0 e 100, informar o quanto ele está distante de um
+determinado número chave, carregado no próprio programa. Ex.: Número chave=20,
+número digitado=15, resposta=5. Número chave=17, número digitado=20, resposta=3
+(Obs.: a resposta deverá ser sempre um número positivo).
+
+chave = int(input("Defina um número chave: "))
+num = int(input("Escolha um número entre 0 a 100: "))
+
+if num > chave:
+    res = num - chave
+    print ("A resposta é: ", res)
+
+else: 
+    res = chave - num
+    print ("A resposta é: ", res)
+
+---------------------------------------------------------------------
+3) Uma Universidade tem problemas com arredondamento das médias dos alunos,
+pois cada professor estipula um critério de arredondamento. Devemos elaborar um
+programa, em Linguagem C++, para a secretaria da Universidade, resolvendo esse
+problema. O programa deve solicitar uma nota e fazer o devido arredondamento.
+Regras:
+Notas que ultrapassem 0,5 de resto serão arredondas para CIMA.
+Ex: 4,6 –>5,0
+Notas que abaixo ou igual a 0,5 de resto serão arredondas para BAIXO.
+Ex: 4,5 –> 4,0
+
+nota = float(input("Digite a nota: "))
+
+parte_inteira = int(nota)
+parte_decimal = nota - parte_inteira
+
+if parte_decimal > 0.5:
+    resultado = parte_inteira + 1
+else:
+    resultado = parte_inteira
+
+print ("Nota arredondada: ", resultado)
+
+------------------------------------------------------------------------
+4) Faça um programa que leia 3 números e exiba:
+a) O maior número;
+b) O menor número;
+c) O número do meio
+
+n1 = float(input("Digite o primeiro número: "))
+n2 = float(input("Digite o segundo número: "))
+n3 = float(input("Digite o terceiro número: "))
+
+maior = max(n1, n2, n3)
+menor = min(n1, n2, n3)
+
+meio = (n1 + n2 + n3) - maior - menor
+
+print("Maior número: ",  maior)
+print("Menor número: ", menor)
+print("Número do meio: ", meio)
+
+------------------------------------------------------------------------
+5)- Faça o programa que calcule o salário líquido dos funcionários de uma empresa. O
+salário líquido é composto por descontos e adicionais, seguindo as seguintes regras:
+Descontos:
+Salário bruto < 800,00 – não realizar nenhum desconto;
+800,00 <= Salário bruto <=1600,00 – descontar 8% de Imposto de Renda e 5
+% de encargos.
+>1600,00 – descontar 15% de Imposto de Renda e 7% de encargos.
+Adicionais:
+Caso o funcionário tenha trabalhado mais de 160 horas no mês, divida o seu salário
+bruto por 160 (representa horas trabalhadas) e calcule 50% de adicional nas horas
+que excederam a 160.
+O usuário deverá digitar o salário bruto e o número de horas trabalhadas no mês de
+cada funcionário, e deverá receber como resultado o salário líquido. O usuário poderá 
+
+salario_bruto = float(input("Digite o salário bruto: "))
+horas_trabalhadas = float(input("Digite as horas trabalhadas: "))
+
+if salario_bruto < 800:
+    desconto_ir = 0
+    desconto_encargos = 0
+elif salario_bruto <= 1600:
+    desconto_ir = salario_bruto * 0.08
+    desconto_encargos = salario_bruto * 0.05
+else:
+    desconto_ir = salario_bruto * 0.15
+    desconto_encargos = salario_bruto * 0.07
+
+if horas_trabalhadas > 160:
+    valor_hora = salario_bruto / 160
+    horas_extras = horas_trabalhadas - 160
+    adicional = valor_hora * horas_extras * 0.5
+else:
+    adicional = 0
+
+salario_liquido = salario_bruto - desconto_ir - desconto_encargos + adicional
+
+print("Salário líquido: ", salario_liquido, "R$")
+
+----------------------------------------------------------------------------
+6)- Faça um programa que receba como entrada o mês (de 1 a 12) e retorne o nome
+do respectivo mês
+
+mes = int(input("Digite um número de 1 à 12: "))
+
+if mes == 1:
+    print ("Mês 1 é janeiro")
+elif mes == 2:
+    print ("Mês 2 é fevereiro")
+elif mes == 3:
+    print ("Mês 3 é março")
+elif mes == 4:
+    print ("Mês 4 é maio")
+elif mes == 5:
+    print ("Mês 5 é abril")
+elif mes == 6:
+    print ("Mês 6 é junho")
+elif mes == 7:
+    print ("Mês 7 é julho")
+elif mes == 8:
+    print ("Mês 8 é agosto")
+elif mes == 9:
+    print ("Mês 9 é setembro")
+elif mes == 10:
+    print ("Mês 10 é outubro")
+elif mes == 11:
+    print ("Mês 11 é novembro")
+elif mes == 12:
+    print ("Mês 12 é dezembro")
+
+------------------------------------------------------------------
+7)- Entrar um código de acesso a um curso. Se o código for 1, 2,3,4 e 5 exibir na tela
+Engenharia, Edificações, Sistemas Elétricos, Turismo e Análise de Sistemas
+respectivamente; caso contrário exibir que o código é inválido.
+
+num = int(input("Escolha um número: "))
+
+if num == 1:
+    print ("Engenharia")
+elif num == 2:
+    print ("Edificações")
+elif num == 3:
+    print ("Sistemas elétricos")
+elif num == 4:
+    print ("Turismo")
+elif num == 5:
+    print ("Análise de sistemas")
+else: 
+    print ("Número imválido")
+
+n1 = float(input("Digite a nota 1: "))
+n2 = float(input("Digite a nota 2: "))
+n3 = float(input("Digite a nota 3: "))
+
+media = (n1 + n2 + n3) / 3
+
+if media >= 6.0:
+    print ("Aprovado", media)
+else:
+    print ("Reprovado", media)
+-----------------------------------------------------------------
+
+n1 = float(input("Digite a nota 1: "))
+n2 = float(input("Digite a nota 2: "))
+
+media1 = (n1 + n2) / 2
+
+if media1 >= 6.0:
+    print ("Aprovado com média: ", media1)
+else:
+    print ("Reprovado com média: ", media1)
+    exame = float(input("Digite a nota do exame: "))
+
+media2 = media1 + exame
+
+if media2 >= 5.0:
+    print ("Aluno aprovado por exame com media: ", media2)
+else:
+    print ("Infelizmente você não atingiu a média")
+
+---------------------------------------------------------------
+
+a = int(input("Digite um número: "))
+b = int(input("Digite outro número: "))
+
+if a > b:
+    res = a - b
+    print ("Resposta: ", res)
+
+else:
+    res = b - a
+    print ("Resposta: ", res)
+
+--------------------------------------------------------------
+
+A = int(input("Digite o lado 1 do triangulo: "))
+B = int(input("Digite o lado 2 do triangulo: "))
+C = int(input("Digite o lado 3 do triangulo: "))
+
+if A < B + C and B < A + C and C < A + B:
+    if A == B or B == C or A == C:
+        print ("É um triângulo isósceles")
+    elif A != B and B != C:
+        print ("É um triângulo escaleno")
+    elif A == B and B == C:
+        print ("É um triângulo equilatero")  
+else:
+    print ("Não é um triângulo")
+
+---------------------------------------------------------------
+
+A = int(input("Digite o número 1: "))
+B = int(input("Digite o número 2: "))
+C = int(input("Digite o número 3: "))
+
+valores_ordenados = sorted([A, B, C])
+
+print ("Os valores ordenado em ordem crescente são: ", 
+valores_ordenados)
+
+----------------------------------------------------------------
+
+import math
+
+A = int(input("Digite o valor de A: "))
+B = int(input("Digite o valor de B: "))
+C = int(input("Digite o valor de C: "))
+
+delta = (B ** 2) -(4 * A * C)
+
+raiz1 = (-B + math.sqrt(delta)) / (A * 2)
+raiz2 = (-B - math.sqrt (delta)) / (A * 2)
+
+print ("A raizes serão: ", raiz1, raiz2)
+
+
+--------------------------------------------------------------
+
+
+A = int(input("Digite um número: "))
+
+valor_absoluto = abs(A)
+
+print ("O valor absoluto do número fornecido é: ", valor_absoluto)
+
+
+-----------------------------------------------------------------
+
+A = int(input("Digite o primeiro número inteiro: "))
+B = int(input("Digite o segundo número inteiro: "))
+C = int(input("Digite o terceiro número inteiro: "))
+
+if A % 2 == 0 and A % 3 == 0:
+    print (A, "É divisivel por 2 e 3.")
+else: 
+    print (A, "Não é divisivel por 2 e 3")
+
+if B % 2 == 0 and B % 3 == 0:
+    print (B, "É divisivel por 2 e 3.")
+else: 
+    print (B, "Não é divisivel por 2 e 3") 
+
+if C % 2 == 0 and C % 3 == 0:
+    print (C, "É divisivel por 2 e 3.")
+else: 
+    print (C, "Não é divisivel por 2 e 3")
+
+1) Elaborar um programa que escreva em tela os números de 1 a 20, utilizando o
+comando while( ).
+
+numero = 1
+while numero <= 20:
+    print(numero)
+    numero += 1
+
+-------------------------------------------------------------------
+
+2) Elaborar um programa que escreva em tela todos os números pares existentes
+entre 20 e 1, utilizando o comando while( ).
+
+x = 0
+while x < 21:
+    if x % 2 != 0:
+        x += 1
+        continue
+    print(x)
+    x += 1
+
+-------------------------------------------------------------------
+
+3) Elaborar um programa que escreva em tela os números de 1 a 20, informando
+quando eles são pares e quando são ímpares, utilizando o comando while( )
+
+x = 0
+while x <= 20:
+    if x % 2 != 0:
+        print(f"{x} - É ímpar")
+    else:
+        print(f"{x} - É par")
+    x += 1
+
+------------------------------------------------------------------
+
+4) Elaborar um programa que escreva em tela os números de 20 a 1, utilizando o
+comando for( ).
+
+for x in range(1,21):
+    print(x)
+
+-------------------------------------------------------------------
+
+5) Elaborar um programa que escreva em tela todos os números impares existentes
+entre 1 e 20, utilizando o comando for( ).
+
+for x in range(1,21):
+    if x % 2 == 0:
+        continue
+    print(x)
+
+-----------------------------------------------------------------------
+
+6) Elaborar um programa que escreva em tela os números de 20 a 1, informando
+quando eles são pares e quando são ímpares, utilizando o comando for( ).
+
+for x in range(1,21):
+    if x % 2 == 0:
+        print(f"{x} - É par")
+    else:
+        print(f"{x} - É impar")
+
+-----------------------------------------------------------------------
+
+7) Elaborar um programa que escreva em tela os números de 1 a 20, utilizando o
+comando do-while( ).
+
+numero = 1
+while True:
+    print(numero)
+    numero += 1
+    if numero > 20:
+        break
+
+----------------------------------------------------------------------
+
+8) Elaborar um programa que escreva em tela todos os números pares existentes
+entre 1 e 20, utilizando o comando do-while( ).
+
+numero = 1
+while True:
+    if numero % 2 == 0:
+        print(numero)
+    numero += 1
+    if numero > 20:
+        break
+
+----------------------------------------------------------------------
+
+9) Elaborar um programa que escreva em tela os números de 1 a 20, informando
+quando eles são pares e quando são ímpares, utilizando o comando do-while( ).
+
+numero = 1
+while True:
+    if numero % 2 == 0:
+        print(f"{numero} - PAR")
+    else:
+        print(f"{numero} - ÍMPAR")
+    
+    numero += 1
+    if numero > 20:  # Condição de saída no final
+        break
+
+---------------------------------------------------------------------
+
+10) Elaborar um programa que seja uma “Calculadora”, onde o usuário deverá digitar
+uma das seguintes teclas: ‘+’, ‘-‘, ‘*’, ‘/’ ou ‘S’. - Caso escolha ‘S’, para sair, o programa
+deverá ser encerrado; - Caso escolha ‘+’, ‘-‘, ‘*’ ou ‘/’, como operações aritméticas, o
+programa
+deverá solicitar a digitação de dois números quaisquer (número a e número b), um por
+vez, realizar a respectiva operação aritmética (soma, subtração, multiplicação ou
+divisão) entre os respectivos números (a e b, nessa ordem) e então apresentar o seu
+resultado. Após isto, deverá voltar à etapa inicial de digitação das teclas ‘+’, ‘-‘, ‘*’, ‘/’
+ou ‘S’ e repetir este item até a digitação da tecla ‘S’.
+
+for i in range(10):
+    tecla = input("Digite a operação (+, -, *, /) ou 'S' para sair: ")
+    
+    if tecla.upper() == 'S':
+        print("Programa encerrado!")
+        break
+    
+    else:
+        a = float(input("Primeiro número: "))
+        b = float(input("Segundo número: "))
+        
+        if tecla == '+': res = a + b
+        elif tecla == '-': res = a - b
+        elif tecla == '*': res = a * b
+        elif tecla == '/': res = a / b
+        
+        print(f"Resultado: {res}")
+
+--------------------------------------------------------
+
+11) Escreva um programa para mostrar na tela os resultados de uma tabuada de um
+número qualquer fornecido via teclado.
+Exemplo:
+Digite o número para a tabuada: 5 <Enter>
+Tabuada do 5:
+5 x 0 = 0
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+
+# Recebe o número do usuário
+numero = int(input("Digite o número para a tabuada: "))
+
+print(f"\nTabuada do {numero}:")
+
+# Gera a tabuada de 0 a 10
+for i in range(11):
+    resultado = numero * i
+    print(f"{numero} x {i} = {resultado}")
