@@ -8,7 +8,6 @@ y = int(input("Quantidade de elementos da lista 2: "))
 for i in range(y):
     lista2.append(int(input(f"Elemento {i+1}: ")))
     
-# Garante que as listas tenham o mesmo tamanho para a soma
 tamanho = min(len(lista1), len(lista2))
 lista3 = []
 for i in range(tamanho):
