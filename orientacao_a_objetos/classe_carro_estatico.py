@@ -6,7 +6,6 @@ class Carro:
 	def acelerar(self):
 		print("O carro está acelerando!")
 		
-# Criando um objeto com valores fixos
 meu_carro = Carro("Vermelho", "Fusca")
 print(f"Modelo: {meu_carro.modelo}")
 print(f"Cor: {meu_carro.cor}")
